@@ -1,12 +1,10 @@
 package exporter
 
-import(
+import (
 	"fmt"
 	"os"
-	"task/social"
-	
+	"task"
 )
-
 
 //ScrollFeeds seeds the feeds of social media and prints them out
 func ScrollFeeds(platforms ...task.SocialMedia) {

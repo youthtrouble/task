@@ -6,10 +6,10 @@ import (
 	"task/social/exporter"
 )
 func main() {
-	//fb := new(facebook.Facebook)
-	//twtr := new(twitter.Twitter)
+	fb := new(facebook.Facebook)
+	twtr := new(twitter.Twitter)
 	err := exporter.Export(twtr, "twtrdata.txt")
-	err := exporter.Export(fb, "fbdata.txt")
+	err = exporter.Export(fb, "fbdata.txt")
 
 	if err != nil {
 		panic(err)

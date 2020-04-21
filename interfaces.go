@@ -1,4 +1,4 @@
-package week3
+package task
 
 //SocialMedia for interface contract
 type SocialMedia interface {
