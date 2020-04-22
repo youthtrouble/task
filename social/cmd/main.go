@@ -18,15 +18,33 @@ func main() {
 		panic(err)
 	}
 
+    j := exporter.Export(twtr, "twtrdata.json")
+	j = exporter.Export(lnkdin, "lnkdindata.json")
+	j = exporter.Export(fb, "fbdata.json")
 
+	if j != nil {
+		panic(err)
+	}
 
-	// twtr := new(twitter.Twitter)
-	// lnkdin := new(linkedin.Linkedin)
+	x := exporter.Export(twtr, "twtrdata.xml")
+	x = exporter.Export(lnkdin, "lnkdindata.xml")
+	x = exporter.Export(fb, "fbdata.xml")
 
-	// ScrollFeeds(fb, twtr, lnkdin)
+	if x != nil {
+		panic(err)
+	}
+	
+
+	y := exporter.Export(twtr, "twtrdata.yaml")
+	y = exporter.Export(lnkdin, "lnkdindata.yaml")
+	y = exporter.Export(fb, "fbdata.yaml")
+
+	if y != nil {
+		panic(err)
+	}
 }
 
-// ScrollFeeds prints all social media feeds
+
 
 
 
